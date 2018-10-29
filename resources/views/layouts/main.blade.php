@@ -24,7 +24,7 @@
 
 @include('layouts.header')
 
-<div class=" mb-35"  style="min-height: 600px" >
+<div   style="min-height: 400px" >
     @yield('content')
 </div>
 
