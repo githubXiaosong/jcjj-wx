@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 陈冲服务器
-Source Server Version : 50640
-Source Host           : 121.28.103.199:5571
+Source Server         : JCJJ新服务器
+Source Server Version : 50505
+Source Host           : 192.144.139.176:3306
 Source Database       : jcjj-wx
 
 Target Server Type    : MYSQL
-Target Server Version : 50640
+Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-10-19 10:45:17
+Date: 2018-10-29 11:01:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,13 +30,17 @@ CREATE TABLE `orders` (
   `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orders
 -- ----------------------------
-INSERT INTO `orders` VALUES ('1', '2', '第一家店', '第一个产品', '无', '100', '2000', '2018-10-05 10:21:24', '2018-10-05 10:21:24');
-INSERT INTO `orders` VALUES ('2', '1', '第二家店', '第一种品类', '无', '200', '2000', '2018-10-05 10:25:51', '2018-10-05 10:25:51');
+INSERT INTO `orders` VALUES ('3', '3', '东方广场店', '光学框架', '备注', '100', '1000', '2018-10-27 14:07:34', '2018-10-27 14:07:34');
+INSERT INTO `orders` VALUES ('4', '3', '东方广场店', '隐形', '22', '1000', '10000', '2018-10-27 14:49:58', '2018-10-27 14:49:58');
+INSERT INTO `orders` VALUES ('5', '3', '东方广场店', '光学框架', '打算', '1000', '1000', '2018-10-27 14:50:23', '2018-10-27 14:50:23');
+INSERT INTO `orders` VALUES ('6', '6', '东方广场店', '光学框架', '无', '10', '1000', '2018-10-27 17:52:30', '2018-10-27 17:52:30');
+INSERT INTO `orders` VALUES ('7', '7', '石景山万达久川睛匠', '光学框架', '会员活动', '0', '0', '2018-10-28 21:25:17', '2018-10-28 21:25:17');
+INSERT INTO `orders` VALUES ('8', '8', '石景山万达久川睛匠', '光学框架', '会员活动', '0', '0', '2018-10-28 21:29:35', '2018-10-28 21:29:35');
 
 -- ----------------------------
 -- Table structure for users
@@ -48,16 +52,29 @@ CREATE TABLE `users` (
   `email` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `sex` tinyint(4) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL COMMENT '地址',
+  `zip_code` varchar(255) DEFAULT NULL COMMENT '邮编',
   `age` tinyint(4) DEFAULT NULL,
-  `degree` int(11) DEFAULT NULL,
+  `qiujing_r` varchar(255) DEFAULT NULL,
+  `qiujing_l` varchar(255) DEFAULT NULL,
+  `tongjin_r` varchar(255) DEFAULT NULL,
+  `tongjin_l` varchar(255) DEFAULT NULL,
+  `tongyuan_r` varchar(255) DEFAULT NULL,
+  `tongyuan_l` varchar(255) DEFAULT NULL,
+  `zhujing_r` varchar(255) DEFAULT NULL,
+  `zhujing_l` varchar(255) DEFAULT NULL,
+  `xiajiaguang_r` varchar(255) DEFAULT NULL,
+  `xiajiaguang_l` varchar(255) DEFAULT NULL,
   `integration` int(11) DEFAULT NULL COMMENT '积分',
   `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'xiaosong', '109923@qq.com', '13081114886', '1', '18', '200', '11', '2018-10-05 10:18:44', '2018-10-05 10:18:44');
-INSERT INTO `users` VALUES ('2', '小松', '12313@qq.com', '13091112331', '0', '29', '200', '29', '2018-10-05 10:20:06', '2018-10-05 10:20:06');
+INSERT INTO `users` VALUES ('3', '尹广浩', '40995670@qq.com', '18811211714', '1', '北京市昌平区', '050000', '28', '-2.75', '-2.5', '0.0', '0.0', '33.5', '33.5', '0.0*0', '-0.5*168', '0.0', '0.0', '500', '2018-10-29 10:03:24', '2018-10-29 10:03:24');
+INSERT INTO `users` VALUES ('6', '唐坤', '409956780@qq.com', '15319752985', '1', '北京市昌平区', '102218', '20', '10', '10', '10', '10', '10', '10', '10', '10', '20', '20', '1500', '2018-10-29 10:03:25', '2018-10-29 10:03:25');
+INSERT INTO `users` VALUES ('7', '丁丁', '123456789@qq.com', '17710800663', '0', '北京市昌平区', '100000', '18', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2018-10-29 10:03:25', '2018-10-29 10:03:25');
+INSERT INTO `users` VALUES ('8', '康敬', '12345678@qq.com', '13801173988', '0', '北京市昌平区', '100000', '0', '0', '0', '0', '0', '0·', '0', '0', '0', '0', '0', '0', '2018-10-29 10:03:26', '2018-10-29 10:03:26');
