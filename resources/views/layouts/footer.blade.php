@@ -1,4 +1,4 @@
-<footer class="footer mt-20">
+<footer class="footer ">
     <div class="container-fluid">
         <nav> <a href="#" target="_blank">关于我们</a> <span class="pipe">|</span> <a href="#" target="_blank">联系我们</a> <span class="pipe">|</span> <a href="#" target="_blank">法律声明</a> </nav>
         <p>Copyright &copy; All Rights Reserved. <br>

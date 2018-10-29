@@ -21,23 +21,27 @@
     <form class="form" action="{{ url('/api/userEdit')}}">
         <div class="form-group">
             <label for="exampleInputEmail1">姓名：</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $user->name }}">
+            <input type="text" class="form-control"  value="{{ $user->name }}">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">手机号：</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $user->phone }}">
+            <input type="text" class="form-control" value="{{ $user->phone }}">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">邮箱：</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" value="{{ $user->email }}">
+            <input type="email" class="form-control"  value="{{ $user->email }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">住址：</label>
+            <input type="text" class="form-control" value="{{ $user->address }}" disabled>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">邮编：</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $user->zip_code }}">
+            <input type="text" class="form-control"  value="{{ $user->zip_code }}" disabled>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">注册时间：</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $user->created_at }}" disabled>
+            <input type="text" class="form-control"  value="{{ $user->created_at }}" disabled>
         </div>
 
     </form>

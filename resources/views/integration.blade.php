@@ -16,25 +16,25 @@
     </nav>
     {{--标题--}}
 
-    <table class="table" id="tab-my-order">
-
-        <br>
-        <div class="list-group">
-
-            <img class="mb-10" style="width: 100%" src="/storage/img/jifen1.png">
 
 
-            <img class="mb-10" style="; border-radius: 10px; width: 80%;  margin-left: 10%; " src="/storage/img/jifen2.jpg">
+
+    <div class="list-group" style="margin: 0">
+
+        <img class="mb-10" style="width: 100%" src="/storage/img/jifen1.png">
 
 
-            <div class="jumbotron">
+        <img class="mb-10" style="; border-radius: 10px; width: 80%;  margin-left: 10%; " src="/storage/img/jifen2.jpg">
 
-                <p style="margin-top: -18%; font-size: 5px;color: white;margin-left: 13%">当前积分:{{ $user->integration }}
-                    分</p>
-            </div>
+
+        <div class="jumbotron">
+
+            <p style="margin-top: -18%; font-size: 5px;color: white;margin-left: 13%">当前积分:{{ $user->integration }}
+                分</p>
         </div>
+    </div>
 
-    </table>
+
 
     <a href="{{ url('page/index') }}">
         <button class="btn btn-block">返回</button>

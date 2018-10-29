@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\FacaduserEdites\Cookie;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\FacaduserEdites\Cookies;
 use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller

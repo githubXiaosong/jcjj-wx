@@ -114,3 +114,10 @@ a.btn:hover,a.btn:focus,a.btn:active,a.btn.active,a.btn.disabled,a.btn[disabled]
 
 /*我的账号按键*/
 .my-account-menu{padding: 15px; font-size: 25px; width: 90%;}
+
+
+/*去掉标题栏的margin*/
+
+.navbar {
+    margin: 0px;
+}

@@ -81,20 +81,7 @@
             </div>
         </div>
 
-        <div class="layui-form-item">
-            <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span>眼镜度数
-            </label>
-            <div class="layui-input-inline  {{ $errors->has('degree') ? 'error-input' : '' }}">
-                <input type="number" id="L_degree" name="degree" required=""
-                       autocomplete="off" class="layui-input" value="{{ old('degree') }}" autofocus>
-            </div>
-            @if ($errors->has('degree'))
-                <span class="help-block error-text">
-                    <strong>{{ $errors->first('degree') }}</strong>
-                </span>
-            @endif
-        </div>
+
 
 
         <div class="layui-form-item">

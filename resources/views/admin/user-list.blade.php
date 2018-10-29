@@ -53,7 +53,7 @@
             <th>性别</th>
             <th>年龄</th>
             <th>email</th>
-            <th>验光度数</th>
+            <th>地址</th>
             <th>邮编</th>
             <th>积分</th>
             <th>更新时间</th>
@@ -74,7 +74,7 @@
                 <td>{{ $user->sex }}</td>
                 <td>{{ $user->age }}</td>
                 <td>{{ $user->email }}</td>
-                <td>{{ $user->degree }}</td>
+                <td>{{ $user->address }}</td>
                 <td>{{ $user->zip_code}}</td>
                 <td>{{ $user->integration}}</td>
 

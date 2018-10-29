@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -52,7 +53,6 @@
             <th>用户</th>
             <th>所消费店面</th>
             <th>产品</th>
-            <th>眼镜度数</th>
             <th>备注</th>
             <th>消费日期</th>
             <th>操作</th>
@@ -71,7 +71,6 @@
             <td>{{ $order->user->name}}</td>
             <td>{{ $order->shop }}</td>
             <td>{{ $order->product }}</td>
-            <td>{{ $order->degree }}</td>
             <td>{{ $order->desc }}</td>
             <td>{{ date_format($order->created_at,'Y-m-d') }}</td>
 

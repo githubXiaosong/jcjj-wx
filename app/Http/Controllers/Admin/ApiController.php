@@ -25,19 +25,20 @@ class ApiController extends Controller
                 'email' => 'required|email|max:255|unique:users,email',
                 'phone' => 'required|digits:11|unique:users,phone',
                 'zip_code' => 'required',
+                'address' => 'required|max:255',
                 'sex' => 'required|in:0,1',
                 'age' => 'required|integer|min:0|max:99',
                 'integration' => 'required|integer|min:0|max:10000',
-                'qiujing_l' => 'required|string|min:0|max:1000',
-                'qiujing_r' => 'required|string|min:0|max:1000',
-                'zhujing_l' => 'required|string|min:0|max:1000',
-                'zhujing_r' => 'required|string|min:0|max:1000',
-                'xiajiaguang_l' => 'required|string|min:0|max:1000',
-                'xiajiaguang_r' => 'required|string|min:0|max:1000',
-                'tongyuan_l' => 'required|string|min:0|max:1000',
-                'tongyuan_r' => 'required|string|min:0|max:1000',
-                'tongjin_l' => 'required|string|min:0|max:1000',
-                'tongjin_r' => 'required|string|min:0|max:1000',
+                'qiujing_l' => 'min:0|max:1000',
+                'qiujing_r' => 'min:0|max:1000',
+                'zhujing_l' => 'min:0|max:1000',
+                'zhujing_r' => 'min:0|max:1000',
+                'xiajiaguang_l' => 'min:0|max:1000',
+                'xiajiaguang_r' => 'min:0|max:1000',
+                'tongyuan_l' => 'min:0|max:1000',
+                'tongyuan_r' => 'min:0|max:1000',
+                'tongjin_l' => 'min:0|max:1000',
+                'tongjin_r' => 'min:0|max:1000',
             ],
             [
 
@@ -53,6 +54,7 @@ class ApiController extends Controller
         $user->phone = rq('phone');
         $user->sex = rq('sex');
         $user->age = rq('age');
+        $user->address = rq('address');
         $user->integration = rq('integration');
         $user->zip_code = rq('zip_code');
         $user->qiujing_l = rq('qiujing_l');
@@ -140,7 +142,6 @@ class ApiController extends Controller
                 'shop' => 'required|string|max:255',
                 'product' => 'required|string|max:255',
                 'desc' => 'required|string|max:500',
-                'degree' => 'required|integer|min:0|max:1000',
                 'price' => 'required|integer|min:0|max:100000'
             ],
             [
@@ -156,9 +157,7 @@ class ApiController extends Controller
         $order->shop = rq('shop');
         $order->product = rq('product');
         $order->desc = rq('desc');
-        $order->degree = rq('degree');
         $order->price = rq('price');
-
         $order->save();
 
         return back()->with('suc_msg', '添加成功');

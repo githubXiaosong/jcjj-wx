@@ -98,6 +98,21 @@
         </div>
 
         <div class="layui-form-item">
+            <label for="L_address" class="layui-form-label">
+                <span class="x-red">*</span>住址
+            </label>
+            <div class="layui-input-inline  {{ $errors->has('address') ? 'error-input' : '' }}">
+                <input type="text" id="L_address" name="address" required=""
+                       autocomplete="off" class="layui-input" value="{{ old('address') }}" autofocus>
+            </div>
+            @if ($errors->has('address'))
+                <span class="help-block error-text">
+                    <strong>{{ $errors->first('address') }}</strong>
+                </span>
+            @endif
+        </div>
+
+        <div class="layui-form-item">
             <label for="L_email" class="layui-form-label">
                 <span class="x-red">*</span>邮箱
             </label>
@@ -116,7 +131,7 @@
             <label for="L_email" class="layui-form-label">
                 <span class="x-red">*</span>邮编
             </label>
-            <div class="layui-input-inline  {{ $errors->has('email') ? 'error-input' : '' }}">
+            <div class="layui-input-inline  {{ $errors->has('zip_code') ? 'error-input' : '' }}">
                 <input type="number" id="L_zipcode" name="zip_code" required=""
                        autocomplete="off" class="layui-input" value="{{ old('zip_code') }}" autofocus>
             </div>
@@ -144,10 +159,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 球镜(左)
+                 球镜(左)
             </label>
             <div class="layui-input-inline  {{ $errors->has('qiujing_l') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="qiujing_l" required=""
+                <input type="text" id="L_degree" name="qiujing_l"
                        autocomplete="off" class="layui-input" value="{{ old('qiujing_l') }}" autofocus>
             </div>
             @if ($errors->has('qiujing_l'))
@@ -159,10 +174,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 球镜(右)
+                 球镜(右)
             </label>
             <div class="layui-input-inline  {{ $errors->has('qiujing_r') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="qiujing_r" required=""
+                <input type="text" id="L_degree" name="qiujing_r"
                        autocomplete="off" class="layui-input" value="{{ old('qiujing_r') }}" autofocus>
             </div>
             @if ($errors->has('qiujing_r'))
@@ -174,10 +189,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 柱镜(左)
+                 柱镜(左)
             </label>
             <div class="layui-input-inline  {{ $errors->has('zhujing_l') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="zhujing_l" required=""
+                <input type="text" id="L_degree" name="zhujing_l"
                        autocomplete="off" class="layui-input" value="{{ old('zhujing_l') }}" autofocus>
             </div>
             @if ($errors->has('zhujing_l'))
@@ -190,10 +205,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 柱镜(右)
+                柱镜(右)
             </label>
             <div class="layui-input-inline  {{ $errors->has('zhujing_r') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="zhujing_r" required=""
+                <input type="text" id="L_degree" name="zhujing_r"
                        autocomplete="off" class="layui-input" value="{{ old('zhujing_r') }}" autofocus>
             </div>
             @if ($errors->has('zhujing_r'))
@@ -205,10 +220,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 下加光(左)
+                下加光(左)
             </label>
             <div class="layui-input-inline  {{ $errors->has('xiajiaguang_l') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="xiajiaguang_l" required=""
+                <input type="text" id="L_degree" name="xiajiaguang_l"
                        autocomplete="off" class="layui-input" value="{{ old('xiajiaguang_l') }}" autofocus>
             </div>
             @if ($errors->has('xiajiaguang_l'))
@@ -220,10 +235,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 下加光(右)
+                 下加光(右)
             </label>
             <div class="layui-input-inline  {{ $errors->has('xiajiaguang_r') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="xiajiaguang_r" required=""
+                <input type="text" id="L_degree" name="xiajiaguang_r"
                        autocomplete="off" class="layui-input" value="{{ old('xiajiaguang_r') }}" autofocus>
             </div>
             @if ($errors->has('xiajiaguang_r'))
@@ -235,10 +250,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 瞳距远用(左)
+                 瞳距远用(左)
             </label>
             <div class="layui-input-inline  {{ $errors->has('tongyuan_l') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="tongyuan_l" required=""
+                <input type="text" id="L_degree" name="tongyuan_l"
                        autocomplete="off" class="layui-input" value="{{ old('tongyuan_l') }}" autofocus>
             </div>
             @if ($errors->has('tongyuan_l'))
@@ -250,10 +265,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 瞳距远用(右)
+                瞳距远用(右)
             </label>
             <div class="layui-input-inline  {{ $errors->has('tongyuan_r') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="tongyuan_r" required=""
+                <input type="text" id="L_degree" name="tongyuan_r"
                        autocomplete="off" class="layui-input" value="{{ old('tongyuan_r') }}" autofocus>
             </div>
             @if ($errors->has('tongyuan_r'))
@@ -265,10 +280,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 瞳距近用(左)
+                瞳距近用(左)
             </label>
             <div class="layui-input-inline  {{ $errors->has('tongjin_l') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="tongjin_l" required=""
+                <input type="text" id="L_degree" name="tongjin_l"
                        autocomplete="off" class="layui-input" value="{{ old('tongjin_l') }}" autofocus>
             </div>
             @if ($errors->has('tongjin_l'))
@@ -281,10 +296,10 @@
 
         <div class="layui-form-item">
             <label for="L_degree" class="layui-form-label">
-                <span class="x-red">*</span> 瞳距近用(右)
+                 瞳距近用(右)
             </label>
             <div class="layui-input-inline  {{ $errors->has('tongjin_r') ? 'error-input' : '' }}">
-                <input type="text" id="L_degree" name="tongjin_r" required=""
+                <input type="text" id="L_degree" name="tongjin_r"
                        autocomplete="off" class="layui-input" value="{{ old('tongjin_r') }}" autofocus>
             </div>
             @if ($errors->has('tongjin_r'))
