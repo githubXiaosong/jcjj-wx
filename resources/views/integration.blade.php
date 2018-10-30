@@ -29,9 +29,20 @@
 
         <div class="jumbotron">
 
-            <p style="margin-top: -18%; font-size: 5px;color: white;margin-left: 13%">当前积分:{{ $user->integration }}
-                分</p>
+
+            <p style="margin-top: -18%; font-size: 3px;color: white;margin-left: 13%;">
+                当前积分:{{ $user->integration }}
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                到期时间:{{ substr($user->member_card_end_at,0,10)  }}
+            </p>
+
+
         </div>
+
+
     </div>
 
 
