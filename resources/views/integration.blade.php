@@ -19,28 +19,34 @@
 
 
 
-    <div class="list-group" style="margin: 0">
+    <div class="list-group" style="color: white;font-size: 20px;">
 
         <img class="mb-10" style="width: 100%" src="/storage/img/jifen1.png">
 
 
-        <img class="mb-10" style="; border-radius: 10px; width: 80%;  margin-left: 10%; " src="/storage/img/jifen2.jpg">
+        <div>
+
+            <div style="margin-left: 6%;margin-top: 10%;padding: 5px;position: absolute; width: 100%; ">
+                卡号:{{ $user->member_no}}
+            </div>
+
+            <div style="margin-top: 47%;padding: 5px;position: absolute; width: 100% ">
 
 
-        <div class="jumbotron">
+                <p style="right: 0px; float: left">
+                    余额:{{ $user->integration }} ¥
+                </p>
+
+                <p style="float: right">
+                    到期时间:{{ substr($user->member_card_end_at,0,10)  }}
+                </p>
+                <div style="clear: both"></div>
 
 
-            <p style="margin-top: -18%; font-size: 12px;color: white;margin-left: 9%;">
-                余额:{{ $user->integration }} ¥
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;
-                余额到期时间:{{ substr($user->member_card_end_at,0,10)  }}
-            </p>
+            </div>
 
+            <img class="mb-10" style="; border-radius: 10px; width: 100%;   "
+                 src="/storage/img/jifen2.jpg">
 
         </div>
 

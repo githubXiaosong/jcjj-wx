@@ -10,5 +10,5 @@ define('STATUS_ON_LINE',0); //上线状态
 define('STATUS_OFF_LINE',1);//下线状态
 
 
-define('GLASSES','光学框架');
+define('GLASSES','框架');
 define('CONTACT_LENSES','隐形');
