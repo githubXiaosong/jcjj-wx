@@ -19,25 +19,25 @@
 
 
 
-    <div class="list-group" style="color: white;font-size: 20px;">
+    <div class="list-group" style="color: white;font-size: 14px;">
 
         <img class="mb-10" style="width: 100%" src="/storage/img/jifen1.png">
 
 
-        <div>
+        <div style="margin: 8%">
 
-            <div style="margin-left: 6%;margin-top: 10%;padding: 5px;position: absolute; width: 100%; ">
+            <div style="margin-left: 5%;margin-top: 7%;padding: 5px;position: absolute; width: 100%; ">
                 卡号:{{ $user->member_no}}
             </div>
 
-            <div style="margin-top: 47%;padding: 5px;position: absolute; width: 100% ">
+            <div style="margin-top: 40%;padding: 5px;position: absolute; width: 100% ">
 
 
                 <p style="right: 0px; float: left">
                     余额:{{ $user->integration }} ¥
                 </p>
 
-                <p style="float: right">
+                <p style="left: 0px;float: right;margin-right:16% ">
                     到期时间:{{ substr($user->member_card_end_at,0,10)  }}
                 </p>
                 <div style="clear: both"></div>
