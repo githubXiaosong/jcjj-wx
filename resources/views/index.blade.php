@@ -86,7 +86,7 @@
         <div class="col-xs-6 col-md-6 col-sm-6 mb-10 ">
             <a href="{{ url('page/integration') }}">
                 <center>
-                    <button class="btn btn-success my-account-menu" style="font-size: 16px" type="button">我的积分</button>
+                    <button class="btn btn-success my-account-menu" style="font-size: 16px" type="button">账户余额</button>
                 </center>
             </a>
         </div>

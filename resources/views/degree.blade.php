@@ -20,38 +20,38 @@
         <table class="table" id="tab-my-order">
             <tr>
                 <th></th>
-                <th>左眼</th>
                 <th>右眼</th>
+                <th>左眼</th>
             </tr>
             <tr>
                 <th> 球镜</th>
-                <th>{{ $user->qiujing_l }}</th>
                 <th>{{ $user->qiujing_r }}</th>
+                <th>{{ $user->qiujing_l }}</th>
             </tr>
 
             <tr>
                 <th>柱镜</th>
-                <th>{{ $user->zhujing_l }}</th>
                 <th>{{ $user->zhujing_r }}</th>
+                <th>{{ $user->zhujing_l }}</th>
             </tr>
 
             <tr>
                 <th>下加光</th>
-                <th>{{ $user->xiajiaguang_l }}</th>
                 <th>{{ $user->xiajiaguang_r }}</th>
+                <th>{{ $user->xiajiaguang_l }}</th>
             </tr>
 
             <tr>
                 <th>瞳距远用</th>
-                <th>{{ $user->tongyuan_l }}</th>
                 <th>{{ $user->tongyuan_r }}</th>
+                <th>{{ $user->tongyuan_l }}</th>
             </tr>
 
 
             <tr>
                 <th>瞳距近用</th>
-                <th>{{ $user->tongjin_l }}</th>
                 <th>{{ $user->tongjin_r }}</th>
+                <th>{{ $user->tongjin_l }}</th>
             </tr>
         </table>
     </div>
