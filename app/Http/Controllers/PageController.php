@@ -6,6 +6,7 @@ use App\Order;
 use App\User;
 use App\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PageController extends Controller
 {
@@ -78,6 +79,20 @@ class PageController extends Controller
     public function login()
     {
         return view('login');
+    }
+
+
+    /**
+     * 测试页面
+     */
+    public function test(Request $request){
+
+//        $request->session()->put('key', 'value1');
+
+        $value = $request->session()->get('check_code');
+//        $request->session()->forget('key');
+        dd($value);
+//        return 1;
     }
 
 }

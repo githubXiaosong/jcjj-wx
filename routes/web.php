@@ -51,6 +51,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['prefix' => 'api'], function () {
         Route::post('getOrderListByPhone', 'ApiController@getOrderListByPhone');
         Route::post('getUserByPhone', 'ApiController@getUserByPhone');
+        Route::post('sendCheckCode', 'ApiController@sendCheckCode');
         Route::post('login', 'ApiController@login');
 
     });
@@ -76,7 +77,6 @@ Route::group(['middleware' => 'web'], function () {
             Route::post('orderAdd', 'Admin\ApiController@orderAdd');
             Route::post('userDelete', 'Admin\ApiController@userDelete');
             Route::post('orderDelete', 'Admin\ApiController@orderDelete');
-
             Route::post('weixinCallback', 'Admin\ApiController@weixinCallback');
         });
     });
